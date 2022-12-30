@@ -42,3 +42,12 @@
 20221230	14:17:13	5ba8a19b-35e4-40a7-bc69-d77beae999b0	GET	undefined	/
 20221230	14:17:26	ac916b8c-c4ee-43ad-be50-9bc2d4d42fec	GET	undefined	/
 20221230	14:17:26	9014bdcd-b018-4ffc-87ad-23854df52ad5	GET	undefined	/css/style.css
+20221230	15:31:14	47d93cb2-0675-4982-ae3a-0b484e8f9c7e	GET	undefined	/
+20221230	15:31:14	337b8640-5e41-4343-b40e-050882cc274f	GET	undefined	/css/style.css
+20221230	15:31:14	211417ed-2286-404d-a597-fa7caa693e28	GET	undefined	/favicon.ico
+20221230	15:31:18	e363f4f6-d26e-4ad0-a6fc-f4cd4bc42804	GET	undefined	/new-page.html
+20221230	15:31:18	c1c7d9d3-45a6-43e2-94a0-26b5ada3eef5	GET	undefined	/css/style.css
+20221230	15:31:18	dbab0c53-f6ac-46ea-9b27-2021bcf9d285	GET	undefined	/img/img1.jpg
+20221230	15:40:06	5d26cdc8-8da9-4f3d-9455-713e2b1a08d5	GET	undefined	/employees
+20221230	15:41:30	c3231963-e738-4e4c-a72e-e75649063d66	GET	undefined	/employees
+20221230	15:41:41	624883b9-d91c-4389-964d-3611b1c9a98d	GET	undefined	/employees
