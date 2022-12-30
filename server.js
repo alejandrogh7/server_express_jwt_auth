@@ -4,24 +4,13 @@ const path = require("path");
 const cors = require("cors");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
+const corsOptions = require("./config/cors.options");
 const PORT = process.env.PORT || 3001;
 
 //middleware
 
 //custom logger
 app.use(logger);
-//apply cors
-const whitelist = ["https://localhost:3000"];
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed"));
-    }
-  },
-  optionsSuccessStatus: 200,
-};
 app.use(cors(corsOptions));
 //form data -> 'content-type': 'application/form-urlencoded'
 app.use(express.urlencoded({ extended: false }));
