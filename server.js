@@ -4,19 +4,25 @@ const path = require("path");
 const cors = require("cors");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
-const corsOptions = require("./config/cors.options");
+const { corsOptions } = require("./config/cors.options");
 const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
+const credentials = require("./middleware/credentials");
 const PORT = process.env.PORT || 3001;
 
 //middleware
 
 //custom logger
 app.use(logger);
+//credentials, fetch cookies credentials requirement
+app.use(credentials);
 app.use(cors(corsOptions));
 //form data -> 'content-type': 'application/form-urlencoded'
 app.use(express.urlencoded({ extended: false }));
 //for json
 app.use(express.json());
+//add Cookies
+app.use(cookieParser());
 //static files -> CSS
 app.use("/", express.static(path.join(__dirname, "/public")));
 app.use("/subdir", express.static(path.join(__dirname, "/public")));
@@ -24,7 +30,10 @@ app.use("/subdir", express.static(path.join(__dirname, "/public")));
 app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
+app.use("/refresh", require("./routes/refresh"));
+app.use("/logout", require("./routes/logout"));
 app.use("/subdir", require("./routes/subdir"));
+
 app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees"));
 
