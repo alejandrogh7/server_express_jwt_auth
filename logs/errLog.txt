@@ -1,1 +1,4 @@
 20221230	14:17:13	f006a988-6714-4651-98b7-31af29592242	Error: Not allowed
+20230101	13:49:30	fee80494-830c-499e-b24e-b9bd58cdcb6f	TypeError: Cannot read properties of undefined (reading 'username')
+20230101	13:50:00	b09e83f7-b93e-4652-81f8-f68c43a85b1f	TypeError: Cannot read properties of undefined (reading 'username')
+20230101	13:52:37	54768fe8-dd5c-4331-b6b3-a20527b9f8e3	TypeError: Cannot read properties of undefined (reading 'username')
